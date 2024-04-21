@@ -10,8 +10,8 @@
     <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/
         if you update and want to force Facebook to re-scrape. -->
 	<meta property="og:image" content="Path to my teaser.png"/>
-	<meta property="og:title" content="Filter-controlled Appearance Transfer with Diffusion Models." />
-	<meta property="og:description" content="Paper description." />
+	<meta property="og:title" content="FilterPrompt: Guiding Image Transfer in Diffusion Models" />
+	<meta property="og:description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Add your Google Analytics tag here -->
@@ -33,26 +33,28 @@
 <body>
 <div class="container">
     <div class="title">
-        Filter-controlled Appearance Transfer with Diffusion Models
+        FilterPrompt: Guiding Image Transfer in Diffusion Models
     </div>
 
     <br>
     <br>
 
     <div class="author">
-        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a><sup>1</sup>
+        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Xi Wang</a><sup>1</sup>
     </div>
     <div class="author">
-        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a><sup>2</sup>
+        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Yichen Peng</a><sup>2</sup>
     </div>
     <div class="author">
-        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a><sup>3</sup>
+        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Heng Fang</a><sup>3</sup>
     </div>
     <div class="author">
-        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Fourth Author</a><sup>4</sup>
+        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Haoran Xie</a><sup>4</sup>
     </div>
     <div class="author">
-        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Fifth Author</a><sup>1</sup>
+        <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Xi Yang*</a><sup>1*</sup>
+    <div class="author">
+            <a href="https://en.wikipedia.org/wiki/James_J._Gibson">Chuntao	Li</a><sup>5</sup>
     </div>
 
     <br>
@@ -89,7 +91,12 @@
 
     <h1>Abstract</h1>
     <p>
-        This is my abstract.
+        In controllable generation tasks, flexibly manipulating the generated images to attain a desired appearance or structure based on a single input image cue remains a critical and longstanding challenge. 
+    Achieving this requires the effective decoupling of key attributes within the input image data, aiming to get representations accurately.
+    Previous research has predominantly concentrated on disentangling image attributes within feature space. However, the complex distribution present in real-world data often makes the application of such decoupling algorithms to other datasets challenging. Moreover, the granularity of control over feature encoding frequently fails to meet specific task requirements.
+    Upon scrutinizing the characteristics of various generative models, we have observed that the input sensitivity and dynamic evolution properties of the diffusion model can be effectively fused with the explicit decomposition operation in pixel space.  This integration enables the image processing operations performed in pixel space for a specific feature distribution of the input image, and can achieve the desired control effect in the generated results.
+    Therefore, we propose FilterPrompt, an approach to enhance the model control effect. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes.
+    In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the model's control capability.
     </p>
 
     <br><br><hr>
@@ -102,12 +109,12 @@
         </a>
     </div>
     <div class="paper-info">
-        <h4>Filter-controlled Appearance Transfer with Diffusion Models</h4>
+        <h4>FilterPrompt: Guiding Image Transfer in Diffusion Models</h4>
         <h5>
             First Author, Second Author, Third Author, Fourth Author, and Fifth Author
         </h5>
         <pre><code>@InProceedings{author20XXtitle,
-    title = {Filter-controlled Appearance Transfer with Diffusion Models},
+    title = {FilterPrompt: Guiding Image Transfer in Diffusion Models},
     author = {Author, First and Author, Second and Author, Third and Author, Fourth and Author, Fifth},
     booktitle = {Conference},
     year = {20XX},
