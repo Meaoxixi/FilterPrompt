@@ -37,12 +37,12 @@ body {
 }
 
 .teaser {
-    width: 120%;
+    width: 100%;
     max-width: 800px;
 }
 
 .teaser img {
-    width: 120%;
+    width: 100%;
 }
 
 .video-container {
@@ -75,7 +75,6 @@ body {
     width: 45%;
     display: inline-block;
     vertical-align: top;
-    background-color: #d8ebc3; /* Light grey background */
 }
 
 @media (max-width: 999px) {
