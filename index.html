@@ -13,6 +13,9 @@
 	<meta property="og:description" content="We introduce FilterPrompt, an approach aimed at enhancing control within diffusion models." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta charset="UTF-8">
+
+
     <!-- Add your Google Analytics tag here -->
     <!--
     <script async
@@ -26,43 +29,89 @@
         gtag('config', 'UA-97476543-1');
     </script>
     -->
+   
+    <script defer src="./resources/fontawesome.all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+    
+
+  
 </head>
 
 <body>
 <div class="container">
-    <div class="title">
-        FilterPrompt: Guiding Image Transfer in Diffusion Models
-    </div>
+    
+    <div id="bg">
+    
+        <div class="title">
+            FilterPrompt:
+        </div>
+        
+        <div class="title">
+            Guiding Image Transfer in Diffusion Models
+        </div>
+        
+        <br> 
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <div class="author">
+            <a href="">Xi Wang</a><sup>1</sup>
+        </div>
+        <div class="author">
+            <a href="https://sites.google.com/view/yichen-peng/home" target="_blank">Yichen Peng</a><sup>2</sup>
+        </div>
+        <div class="author">
+            <a href="https://www.kth.se/profile/hfang" target="_blank">Heng Fang</a><sup>3</sup>
+        </div>
+        <div class="author">
+            <a href="http://www.jaist.ac.jp/~xie/" target="_blank">Haoran Xie</a><sup>4</sup>
+        </div>
+        <div class="author">
+            <a href="https://keepthinkingyx.github.io/Xi-Yang/" target="_blank">Xi Yang*</a><sup>1*</sup>
+        </div>
+        <div class="author">
+                <a href="https://gujisuo.jlu.edu.cn/info/1032/1156.htm" target="_blank">Chuntao	Li</a><sup>5</sup>
+        </div>
 
-    <div class="author">
-        <a href="">Xi Wang</a><sup>1</sup>
-    </div>
-    <div class="author">
-        <a href="https://sites.google.com/view/yichen-peng/home" target="_blank">Yichen Peng</a><sup>2</sup>
-    </div>
-    <div class="author">
-        <a href="https://www.kth.se/profile/hfang" target="_blank">Heng Fang</a><sup>3</sup>
-    </div>
-    <div class="author">
-        <a href="http://www.jaist.ac.jp/~xie/" target="_blank">Haoran Xie</a><sup>4</sup>
-    </div>
-    <div class="author">
-        <a href="https://keepthinkingyx.github.io/Xi-Yang/" target="_blank">Xi Yang*</a><sup>1*</sup>
-    </div>
-    <div class="author">
-            <a href="https://gujisuo.jlu.edu.cn/info/1032/1156.htm" target="_blank">Chuntao	Li</a><sup>5</sup>
-    </div>
 
-    <br>
-    <br>
 
-    <div class="links"><a href="https://arxiv.org/abs/2404.13263" target="_blank">[Paper]</a></div>
-    <div class="links"><a href="https://github.com/Meaoxixi/FilterPrompt" target="_blank">[Code]</a></div>
-    <div class="links"><a href="">[Demo]</a></div>
+        <br>
+        <br>
+
+        <span class="link-block">
+            <a href="https://arxiv.org/abs/2404.13263" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>Paper</span>
+            </a>
+        </span>
+
+        <span class="link-block">
+            <a href="https://github.com/Meaoxixi/FilterPrompt" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+                <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+            </a>
+        </span>
+
+
+        <span class="link-block">
+            <a href=""
+            class="external-link button is-normal is-rounded is-dark">
+            <span>Demo</span>
+            </a>
+        </span> 
+
+        <br>
+        <br>
+
+    </div>
+    
     <!-- <div class="links"><a href="">[More effects]</a></div> -->
     
 
@@ -116,18 +165,94 @@
 
     <h1>Applications</h1>
 
+    <br>
+
     <div class="image-container">
-        <img style="width:80%; margin-top: 10px; margin-bottom: 20px;"
-                src="./resources/5_2_2_appearance_Tansfer.png" 
-                alt="Style transfer tasks: Our focus is to obtain the low-level texture features from the style image without semantic correspondence and then render it to the content image." 
-                style="display: block;">
-        <p style="text-align: justify; font-size: 16px; margin-top: 20px;">Style transfer tasks: Our focus is to obtain the low-level texture features from the style image without semantic correspondence and then render it to the content image.</p>
-       
-        <img style="width:80%; margin-top: 60px; margin-bottom: 20px;"
-                src="./resources/5_2_1_style_Tansfer.png" 
-                alt="Appearance transformation tasks: A total of six domains (cat, dog, wild, bird, airplane, car), we showcase the effects achieved by the baseline architecture with filtering combined operation in local, object-centric, and full-image-level appearance transfer tasks." 
-                style="display: block;">
-        <p style="text-align: justify; font-size: 16px; margin-top: 20px;">Appearance transformation tasks: A total of six domains (cat, dog, wild, bird, airplane, car), we showcase the effects achieved by the baseline architecture with filtering combined operation in local, object-centric, and full-image-level appearance transfer tasks.</p>
+        
+          
+        <div class="imageshow6">
+            <div id="slider">
+                <div class="slides">
+                    <div class="slide"><img src=".\resources\at1.png" alt="Image 1" width="3052" height="863"></div>
+                    <div class="slide"><img src=".\resources\at2.png" alt="Image 2" width="3052" height="863"></div>
+                    <div class="slide"><img src=".\resources\at3.png" alt="Image 3" width="3052" height="863"></div>
+                    <div class="slide"><img src=".\resources\at4.png" alt="Image 4" width="3052" height="996"></div>
+                    <div class="slide"><img src=".\resources\at5.png" alt="Image 5" width="3052" height="625"></div>
+                    <div class="slide"><img src=".\resources\at6.png" alt="Image 6" width="3052" height="603"></div>
+                </div>
+                <button id="prev" onclick="prevSlide()">&#9664;</button>
+                <button id="next" onclick="nextSlide()">&#9654;</button>
+            </div>
+            
+            <script>
+                let currentIndex = 0;
+                const slides = document.querySelectorAll('.slide');
+                
+                function showSlide(index) {
+                    if (index < 0) {
+                        index = slides.length - 1;
+                    } else if (index >= slides.length) {
+                        index = 0;
+                    }
+                    const offset = -index * 16.666; 
+                    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+                    currentIndex = index;
+                }
+                
+                function prevSlide() {
+                    showSlide(currentIndex - 1);
+                }
+                
+                function nextSlide() {
+                    showSlide(currentIndex + 1);
+                }
+            </script>
+            <p style="text-align: justify; font-size: 16px; margin-top: 20px;"><span style="font-weight: bold;">Style transfer tasks:</span> Our focus is to obtain the low-level texture features from the style image without semantic correspondence and then render it to the content image.</p>
+        </div>
+
+        <br><br>
+        <br><br>
+
+        <div class="imageshow3">
+            <div id="slider1">
+                <div class="slides1">
+                    <div class="slide1"><img src=".\resources\st1.png" alt="Image 1" width="7354" height="1699"></div>
+                    <div class="slide1"><img src=".\resources\st2.png" alt="Image 2" width="7354" height="1557"></div>
+                    <div class="slide1"><img src=".\resources\st3.png" alt="Image 3" width="7354" height="1243"></div>
+                </div>
+                <button id="prev1" onclick="prevSlide1()">&#9664;</button>
+                <button id="next1" onclick="nextSlide1()">&#9654;</button>
+            </div>
+            
+            <script>
+                let currentIndex1 = 0;
+                const slides1 = document.querySelectorAll('.slide1');
+                
+                function showSlide1(index) {
+                    if (index < 0) {
+                        index = slides1.length - 1;
+                    } else if (index >= slides1.length) {
+                        index = 0;
+                    }
+                    const offset1 = -index * 33.333; 
+                    document.querySelector('.slides1').style.transform = `translateX(${offset1}%)`;
+                    currentIndex1 = index;
+                }
+                
+                function prevSlide1() {
+                    showSlide1(currentIndex1 - 1);
+                }
+                
+                function nextSlide1() {
+                    showSlide1(currentIndex1 + 1);
+                }
+            </script>
+            <p style="text-align: justify; font-size: 16px; margin-top: 20px;"><span style="font-weight: bold;">Appearance transformation tasks:</span> A total of six domains (cat, dog, wild, bird, airplane, car), we showcase the effects achieved by the baseline architecture with filtering combined operation in local, object-centric, and full-image-level appearance transfer tasks.</p>
+        </div>
+            
+            
+    
+    
     </div>
     
 
@@ -139,7 +264,16 @@
              alt="Model overview figure"/>
     </a>
     <br>
-    <a class="links" href="https://github.com/Meaoxixi/FilterPrompt" target="_blank">[GitHub]</a>
+    
+    <span class="link-block">
+        <a href="https://github.com/Meaoxixi/FilterPrompt" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+        </span>
+        <span>Github</span>
+        </a>
+    </span>
 
     <br><br><hr>
 
