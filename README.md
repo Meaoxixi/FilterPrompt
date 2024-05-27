@@ -125,12 +125,10 @@ After installation and downloading the models, you can use `python app.py` to pe
 ## Citation
 If you find [FilterPrompt](https://arxiv.org/abs/2404.13263) helpful in your research/applications, please cite using this BibTeX:
 ```bibtex
-@misc{wang2024filterprompt,
-      title={FilterPrompt: Guiding Image Transfer in Diffusion Models}, 
-      author={Xi Wang and Yichen Peng and Heng Fang and Haoran Xie and Xi Yang and Chuntao Li},
-      year={2024},
-      eprint={2404.13263},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{wang2024filterprompt,
+  title={FilterPrompt: Guiding Image Transfer in Diffusion Models},
+  author={Wang, Xi and Peng, Yichen and Fang, Heng and Xie, Haoran and Yang, Xi and Li, Chuntao},
+  journal={arXiv preprint arXiv:2404.13263},
+  year={2024}
 }
 ```
