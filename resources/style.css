@@ -195,7 +195,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* 控件之间的间距，可根据需要调整 */
+  gap: 35px; /* 控件之间的间距，可根据需要调整 */
 }
 
 .link-block a {
