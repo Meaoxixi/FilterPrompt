@@ -191,20 +191,10 @@ a:hover {
     margin-right: 45px;
 }
 
-.threeButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px; /* 控件之间的间距，可根据需要调整 */
-}
-
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-
-
 
 .modal-background {
     bottom: 0;
