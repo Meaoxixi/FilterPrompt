@@ -77,10 +77,6 @@ body {
     height: 100%;
 }
 
-.paperColumn {
-  display: flex;
-}
-
 .paper-thumbnail {
     margin: 0 auto;
     width: 40%;
