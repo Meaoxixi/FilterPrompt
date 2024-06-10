@@ -11,12 +11,12 @@ We propose FilterPrompt, an approach to enhance the model control effect. It can
 ---
 # Getting Started
 ## Prerequisites
-- Linux or macOS
+- We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/).
 - NVIDIA GPU (Available memory is greater than 20GB)
-- CUDA CuDNN (version ≥ 11.1)
-- Python 3.7.16
+- CUDA CuDNN (version ≥ 11.1, we actually use 11.7)
+- Python 3.11.3 (Gradio requires Python 3.8 or higher)
 - PyTorch: [Find the torch version that is suitable for the current cuda](https://pytorch.org/get-started/previous-versions/)
-  - 【example】:`pip install torch==1.10.1+cu111 torchvision==0.11.2 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html`
+  - 【example】:`pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 torchaudio==2.0.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117`
 
 ## Installation
 Specifically, inspired by the concept of decoupled cross-attention in [IP-Adapter](https://ip-adapter.github.io/), we apply a similar methodology. 
@@ -26,14 +26,13 @@ Please follow the instructions below to complete the environment configuration r
 git clone --single-branch --branch main https://github.com/Meaoxixi/FilterPrompt.git
 ```
 - Dependencies
-
-We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/). 
+ 
 All dependencies for defining the environment are provided in `requirements.txt`.
 ```
 cd FilterPrompt
-conda create --name fp_env python=3.7.16
+conda create --name fp_env python=3.11.3
 conda activate fp_env
-pip install torch==1.10.1+cu111 torchvision==0.11.2 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
+pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 torchaudio==2.0.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install -r requirements.txt
 ```
 - Download the necessary modules in the relative path `models/` from the following links
@@ -42,9 +41,9 @@ pip install -r requirements.txt
 |:---------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
 | `models/`                                                                                                            | root path                                                                                                               |
 | &nbsp;&nbsp;&nbsp;&nbsp;├── `ControlNet/`                                                                            | Place the pre-trained model of [ControlNet](https://huggingface.co/lllyasviel)                                          |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── `control_v11f1p_sd15_depth `                   | ControlNet_depth                                                                                                        |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── `control_v11p_sd15_softedge`                   | ControlNet_softEdge                                                                                                     |
-| &nbsp;&nbsp;&nbsp;&nbsp;├── `IP-Adapter/`                                                                            | Place the model of [IP-Adapter](https://huggingface.co/h94/IP-Adapter/tree/main/models)                                 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── `control_v11f1p_sd15_depth `                   | [ControlNet_depth](https://huggingface.co/lllyasviel/control_v11f1p_sd15_depth/tree/main)                                                                                                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── `control_v11p_sd15_softedge`                   | [ControlNet_softEdge](https://huggingface.co/lllyasviel/control_v11p_sd15_softedge/tree/main)                                                                                                 |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── `IP-Adapter/`                                                                            | [IP-Adapter](https://huggingface.co/h94/IP-Adapter/tree/main/models)                                 |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── `image_encoder `                               | image_encoder of IP-Adapter                                                                                             |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── `other needed configuration files`             |                                                                                                                         |
 | &nbsp;&nbsp;&nbsp;&nbsp;├── `sd-vae-ft-mse/`                                                                         | Place the model of [sd-vae-ft-mse](https://huggingface.co/stabilityai/sd-vae-ft-mse/tree/main)                          |
@@ -58,77 +57,15 @@ pip install -r requirements.txt
 
 After installation and downloading the models, you can use `python app.py` to perform code in gradio. We have designed four task types to facilitate you to experience the application scenarios of FilterPrompt.
 
-[//]: # (```)
-
-[//]: # (python demo_gradio.py)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (Note that both images should be size of 1024x1024 to obtain best results.)
-
-[//]: # ()
-[//]: # (It should provide the following interface for you to try. Make sure you install DPT following the section above.)
-
-[//]: # ()
-[//]: # ()
-[//]: # (## Inferencing on batch of images)
-
-[//]: # (To cross-inference on a set of input images and material exemplars, first create the following directory: )
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (mkdir demo_assets/output_images)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (Follow the above steps to obtain and place all the material exemplars and corresponding input images/depths into their directories.)
-
-[//]: # ()
-[//]: # (Then run:)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (python run_batch.py)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (### Visualize results using HTML4Vision)
-
-[//]: # ()
-[//]: # (To visualize all the batch results, we utilize the HTML4Vision library, which can be installed with:)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (pip install html4vision)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (Then, run:)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (python visualization.py)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (This will generate an html file `index.html` in the same directory that contains all the results after material transfer.)
-
 ## Citation
 If you find [FilterPrompt](https://arxiv.org/abs/2404.13263) helpful in your research/applications, please cite using this BibTeX:
 ```bibtex
-@article{wang2024filterprompt,
-  title={FilterPrompt: Guiding Image Transfer in Diffusion Models},
-  author={Wang, Xi and Peng, Yichen and Fang, Heng and Xie, Haoran and Yang, Xi and Li, Chuntao},
-  journal={arXiv preprint arXiv:2404.13263},
-  year={2024}
+@misc{wang2024filterprompt,
+      title={FilterPrompt: Guiding Image Transfer in Diffusion Models}, 
+      author={Xi Wang and Yichen Peng and Heng Fang and Haoran Xie and Xi Yang and Chuntao Li},
+      year={2024},
+      eprint={2404.13263},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
