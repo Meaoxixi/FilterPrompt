@@ -9,14 +9,13 @@ We propose FilterPrompt, an approach to enhance the model control effect. It can
 ![arch](https://raw.githubusercontent.com/Meaoxixi/FilterPrompt/gh-pages/resources/method_diagram.png)
 
 ---
-# 📝 Changelog
+## 📝 Changelog
 - [x] 2024.04.20: The arXiv paper of [FilterPrompt](https://arxiv.org/abs/2404.13263) is online.
 - [x] 2024.05.01: [Project-Page] of FilterPrompt.
 - [] Release the code.
 - [] Public [Demo](https://huggingface.co/spaces/Meaowangxi/FilterPrompt-demo) for users to try FilterPrompt online.
 
 ---
-# Getting Started
 ## Prerequisites
 - We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/).
 - NVIDIA GPU (Available memory is greater than 20GB)
