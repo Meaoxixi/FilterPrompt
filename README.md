@@ -1,9 +1,10 @@
 # ___***FilterPrompt: Guiding Image Transfer in Diffusion Models***___
+**Xi Wang**, Yichen Peng, Heng Fang, Haoran Xie, Xi Yang, Chuntao	Li
 
 <a href='https://meaoxixi.github.io/FilterPrompt/'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
 <a href='https://arxiv.org/pdf/2404.13263'><img src='https://img.shields.io/badge/Paper-blue'></a> 
 <a href='https://huggingface.co/spaces/Meaowangxi/FilterPrompt-demo'><img src='https://img.shields.io/badge/Demo-orange'></a> 
-**Xi Wang**, Yichen Peng, Heng Fang, Haoran Xie, Xi Yang, Chuntao	Li
+
 
 We propose FilterPrompt, an approach to enhance the model control effect. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the model's control capability.
 
