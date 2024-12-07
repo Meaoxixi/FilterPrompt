@@ -186,7 +186,7 @@
                 let currentIndex1 = 0;
                 const slides1 = document.querySelectorAll('.slide');
                 
-                function showSlide1(index) {
+                function showSlide(index) {
                     if (index < 0) {
                         index = slides1.length - 1;
                     } else if (index >= slides1.length) {
@@ -197,12 +197,12 @@
                     currentIndex1 = index;
                 }
                 
-                function prevSlide1() {
-                    showSlide1(currentIndex1 - 1);
+                function prevSlide() {
+                    showSlide(currentIndex1 - 1);
                 }
                 
-                function nextSlide1() {
-                    showSlide1(currentIndex1 + 1);
+                function nextSlide() {
+                    showSlide(currentIndex1 + 1);
                 }
             </script>
             <p style="text-align: justify; font-size: 16px; margin-top: 20px;"><span style="font-weight: bold;">Appearance transformation tasks:</span> We showcase the effects achieved by the baseline architecture with filtering combined operation in appearance transfer tasks.</p>
