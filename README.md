@@ -1,4 +1,4 @@
-# ___***FilterPrompt: Guiding Image Transfer in Diffusion Models***___
+# ___***FilterPrompt: A Simple yet Efficient Approach to Guide Image Appearance Transfer in Diffusion Models***___
 **Xi Wang**, Yichen Peng, Heng Fang, Haoran Xie, Xi Yang, Chuntao	Li
 
 <a href='https://meaoxixi.github.io/FilterPrompt/'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
