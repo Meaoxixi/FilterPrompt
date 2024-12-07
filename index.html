@@ -48,7 +48,7 @@
         </div>
         
         <div class="title">
-            Guiding Image Transfer in Diffusion Models
+            A Simple yet Efficient Approach to Guide Image Appearance Transfer in Diffusion Models
         </div>
         
         <br> 
@@ -153,7 +153,7 @@
 
     <h1>Abstract</h1>
     <p style="text-align: justify; font-size: 16px;">
-    In controllable generation tasks, flexibly manipulating the generated images to attain a desired appearance or structure based on a single input image cue remains a critical and longstanding challenge. Achieving this requires the effective decoupling of key attributes within the input image data, in order to get representations accurately. Previous research has concentrated predominantly on disentangling image attributes within feature space. However, the complex distribution present in real-world data often makes the application of such decoupling algorithms to other datasets challenging. Moreover, the granularity of control over feature encoding frequently fails to meet specific task requirements. Upon scrutinizing the characteristics of various generative models, we have observed that the input sensitivity and dynamic evolution properties of the diffusion model can be effectively fused with the explicit decomposition operation in pixel space. This allows the operation that we design and use in pixel space to achieve the desired control effect on the specific representation in the generated results. This integration enables the image processing operations performed in pixel space for a specific feature distribution of the input image, and can achieve the desired control effect in the generated results. Therefore, we propose FilterPrompt, an approach to enhance the effect of controllable generation. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the effect of controllable generation. Therefore, we propose FilterPrompt, an approach to enhance the model control effect. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the model's control capability.
+    In controllable generation tasks, flexibly manipulating the generated images to attain a desired appearance or structure based on a single input image cue remains a critical and longstanding challenge. Achieving this requires the effective decoupling of key attributes within the input image data to achieve representations accurately. Previous works have concentrated predominantly on disentangling image attributes within feature space. However, the complex distribution present in real-world data often makes the application of such decoupling algorithms to other datasets challenging. Moreover, the granularity of control over feature encoding frequently fails to meet specific task requirements. Upon scrutinizing the characteristics of various generative models, we have observed that the input sensitivity and dynamic evolution properties of the diffusion model can be effectively fused with the explicit decomposition operation in pixel space. This allows the operation that we design and use in pixel space to achieve the desired control effect on the specific representation in the generated results. Therefore, we propose FilterPrompt, an approach to enhance the effect of controllable generation. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the effect of controllable generation
     </p>
 
 
@@ -175,8 +175,8 @@
                     <div class="slide"><img src=".\resources\at2.png" alt="Image 2" width="3052" height="863"></div>
                     <div class="slide"><img src=".\resources\at3.png" alt="Image 3" width="3052" height="863"></div>
                     <div class="slide"><img src=".\resources\at4.png" alt="Image 4" width="3052" height="996"></div>
-                    <div class="slide"><img src=".\resources\at5.png" alt="Image 5" width="3052" height="625"></div>
-                    <div class="slide"><img src=".\resources\at6.png" alt="Image 6" width="3052" height="603"></div>
+                    <div class="slide"><img src=".\resources\at5.png" alt="Image 5" width="3052" height="863"></div>
+
                 </div>
                 <button id="prev" onclick="prevSlide()">&#9664;</button>
                 <button id="next" onclick="nextSlide()">&#9654;</button>
@@ -210,18 +210,6 @@
 
         <br><br>
         <br><br>
-
-        <div class="imageshow3">
-            <div id="slider1">
-                <div class="slides1">
-                    <div class="slide1"><img src=".\resources\st1.png" alt="Image 1" width="7354" height="1699"></div>
-                    <div class="slide1"><img src=".\resources\st2.png" alt="Image 2" width="7354" height="1557"></div>
-                    <div class="slide1"><img src=".\resources\st3.png" alt="Image 3" width="7354" height="1243"></div>
-                </div>
-                <button id="prev1" onclick="prevSlide1()">&#9664;</button>
-                <button id="next1" onclick="nextSlide1()">&#9654;</button>
-            </div>
-            
             <script>
                 let currentIndex1 = 0;
                 const slides1 = document.querySelectorAll('.slide1');
