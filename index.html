@@ -153,7 +153,7 @@
 
     <h1>Abstract</h1>
     <p style="text-align: justify; font-size: 16px;">
-    In controllable generation tasks, flexibly manipulating the generated images to attain a desired appearance or structure based on a single input image cue remains a critical and longstanding challenge. Achieving this requires the effective decoupling of key attributes within the input image data to achieve representations accurately. Previous works have concentrated predominantly on disentangling image attributes within feature space. However, the complex distribution present in real-world data often makes the application of such decoupling algorithms to other datasets challenging. Moreover, the granularity of control over feature encoding frequently fails to meet specific task requirements. Upon scrutinizing the characteristics of various generative models, we have observed that the input sensitivity and dynamic evolution properties of the diffusion model can be effectively fused with the explicit decomposition operation in pixel space. This allows the operation that we design and use in pixel space to achieve the desired control effect on the specific representation in the generated results. Therefore, we propose FilterPrompt, an approach to enhance the effect of controllable generation. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the effect of controllable generation
+    In controllable generation tasks, flexibly manipulating the generated images to attain a desired appearance or structure based on a single input image cue remains a critical and longstanding challenge. Achieving this requires the effective decoupling of key attributes within the input image data to achieve representations accurately. Previous works have concentrated predominantly on disentangling image attributes within feature space. However, the complex distribution present in real-world data often makes the application of such decoupling algorithms to other datasets challenging. Moreover, the granularity of control over feature encoding frequently fails to meet specific task requirements. Upon scrutinizing the characteristics of various generative models, we have observed that the input sensitivity and dynamic evolution properties of the diffusion model can be effectively fused with the explicit decomposition operation in pixel space. This allows the operation that we design and use in pixel space to achieve the desired control effect on the specific representation in the generated results. Therefore, we propose FilterPrompt, an approach to enhance the effect of controllable generation. It can be universally applied to any diffusion model, allowing users to adjust the representation of specific image features in accordance with task requirements, thereby facilitating more precise and controllable generation outcomes. In particular, our designed experiments demonstrate that the FilterPrompt optimizes feature correlation, mitigates content conflicts during the generation process, and enhances the effect of controllable generation.
     </p>
 
 
@@ -183,34 +183,6 @@
             </div>
             
             <script>
-                let currentIndex = 0;
-                const slides = document.querySelectorAll('.slide');
-                
-                function showSlide(index) {
-                    if (index < 0) {
-                        index = slides.length - 1;
-                    } else if (index >= slides.length) {
-                        index = 0;
-                    }
-                    const offset = -index * 16.666; 
-                    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-                    currentIndex = index;
-                }
-                
-                function prevSlide() {
-                    showSlide(currentIndex - 1);
-                }
-                
-                function nextSlide() {
-                    showSlide(currentIndex + 1);
-                }
-            </script>
-            <p style="text-align: justify; font-size: 16px; margin-top: 20px;"><span style="font-weight: bold;">Style transfer tasks:</span> Our focus is to obtain the low-level texture features from the style image without semantic correspondence and then render it to the content image.</p>
-        </div>
-
-        <br><br>
-        <br><br>
-            <script>
                 let currentIndex1 = 0;
                 const slides1 = document.querySelectorAll('.slide1');
                 
@@ -235,11 +207,6 @@
             </script>
             <p style="text-align: justify; font-size: 16px; margin-top: 20px;"><span style="font-weight: bold;">Appearance transformation tasks:</span> A total of six domains (cat, dog, wild, bird, airplane, car), we showcase the effects achieved by the baseline architecture with filtering combined operation in local, object-centric, and full-image-level appearance transfer tasks.</p>
         </div>
-            
-            
-    
-    
-    </div>
     
 
     <br><br><hr>
