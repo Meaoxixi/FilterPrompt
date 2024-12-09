@@ -1,5 +1,5 @@
 # ___***FilterPrompt: A Simple yet Efficient Approach to Guide Image Appearance Transfer in Diffusion Models***___
-**Xi Wang**, Yichen Peng, Heng Fang, Haoran Xie, Xi Yang, Chuntao	Li
+**Xi Wang**, Yichen Peng, Heng Fang, Yilin Wang, Haoran Xie, Xi Yang, Chuntao	Li
 
 <a href='https://meaoxixi.github.io/FilterPrompt/'><img src='https://img.shields.io/badge/Project-Page-green'></a> 
 <a href='https://arxiv.org/pdf/2404.13263'><img src='https://img.shields.io/badge/Paper-blue'></a> 
